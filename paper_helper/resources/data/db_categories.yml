@@ -1,0 +1,132 @@
+Regulation network:
+ ARN
+ -AtmiRNET
+ -CircuitsDB
+ -NetAge
+ -OCDB
+ -Psmir
+Disease:
+ BioM2Disease
+ -CCGD
+ -dbDEMC
+ -EpimiRBase
+ -HMDD
+ -HNOCDB
+ -IGDB. NSCLC
+ -Immune-miR
+ -IntmiR
+ -miR2Disease
+ -NCG
+ -RCGD
+ -S-MED
+ -SomamiR
+ -TMREC
+ -OncomiRdbB
+miRNA-target:
+ ceRDB
+ -ComiRNet
+ -comTAR
+ -ExprTargetDB
+ -CSmiRTar
+ -HOCTARdb
+ -MicroPC
+ -microPIR
+ -mimiRNA
+ -miR-EdiTar
+ -MI@NT@N
+ -miRDeathDB
+ -TargetScanS
+ -doRiNA
+ -mirDIP
+ -miRecords
+ -miRFANs
+ -miRGate
+ -targetHub
+ -miRNAMap
+ -miRNA - target gene
+ -miRNA_Targets
+ -miRNEST
+ -miRSel
+ -mirRDB
+ -miRSponge
+ -miRTarBase
+ -miRWalk
+ -miSolRNA
+ -miTALOS
+ -Patrocles
+ -VirmiRNA PolymiRTS
+ -RepTar
+ -Ssa miRNAs DB
+ -MtiBase
+ -TarBase
+ -miRSystem vHoT
+ -ViTa
+ -mirCoX
+ -PMTED
+ -microPIR
+ -PAmiRDB
+Pathway analysis:
+  DIANA miRPath
+  -miRHrt
+  -miRnalyze
+  -miRNApath
+  -miRPathDB
+SNPS:
+ dPORE
+ -miRdSNP
+ -MiRSNP
+ -miRNA SNiPer
+ -u
+ -dbSMR
+ -miRNASNP
+ -CREAM
+Functional annotation:
+ miRGator
+ -miRNA Body Map
+ -MiRFANS
+ -SorghumFDB
+Specifics:
+ Antagomirbase
+ -miRStress
+ -CoGemiR
+ -doRiNA
+ -EpimiR
+ -DMD
+ -ExellmiRDB
+ -Vir-Mir db
+ -PNRD
+ -Isomirs
+ -MDTE DB
+ -microRNAviewer
+ -MicroTrout
+ -PmiRexAt
+ -mirPub
+ -miRandb
+ -miReg
+ -miREnvironment
+ -miRBase Tracker
+ -MultiMir
+ -PASmiR
+ -mESAdb
+ -mirEX
+ -RiceATM
+ -mirGen
+ -miRmine
+ -miRNeye
+ -miROrtho
+ -miRNA
+ -PlanTE-MIR DB
+ -MirGeneDB.org
+ -mirtronDB
+ -MiromicroTranspoGene
+ -DMD
+ -SM2miR
+ -miRvar
+ -Pharmaco-miR
+ -PmiRKB
+ -PMRD
+ -Starbase PuTmiR
+ -TransmiR
+ -Ucbase & miRfunc
+ -YM500
+ -ZooMir
