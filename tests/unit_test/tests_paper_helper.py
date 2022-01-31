@@ -1,13 +1,13 @@
 import pytest
 import requests
-
+import numpy as np
 from bs4 import BeautifulSoup
 
 from paper_helper import common_tools
 from paper_helper.common_tools import get_list_from_file, yml_to_dict, get_csv_into_dictionary
-from paper_helper.paper_helper import EvaluatePapers
+from paper_helper.paper_helper import RecollectPapers
 
-helper = EvaluatePapers()
+helper = RecollectPapers()
 
 
 def test_find_amount():
@@ -23,7 +23,7 @@ def test_get_number_of_cites(monkeypatch):
     with open("../test_resources/ncbi_found_article.html", 'r') as file:
         html = file.read()
         html = BeautifulSoup(html, "html.parser")
-    monkeypatch.setattr(EvaluatePapers, "get_soup_from_html", lambda *args, **kwargs: html)
+    monkeypatch.setattr(RecollectPapers, "get_soup_from_html", lambda *args, **kwargs: html)
     papers_ids = ["21904438", "14681370"]
     helper.pubmed_ids = papers_ids
     cites = helper.get_number_cites_from_list(papers_ids)
@@ -36,6 +36,7 @@ def test_get_list_from_file():
 
 
 def test_get_paper_data(monkeypatch):
+    helper.category_list_address = "../../paper_helper/resources/data/db_categories.yml"
     short_csv = [{'database': 'Antagomirbase', 'year': '2011', 'Organism': 'Unspecified',
                   'Website': 'http://bioinfopresidencycollegekolkata.edu.in/antagomirs.html', 'Download': 'No',
                   'Available': 'No',
@@ -50,4 +51,18 @@ def test_get_paper_data(monkeypatch):
 
 def test_get_yml_from_file():
     dic = yml_to_dict(file_name="../../paper_helper/resources/data/db_categories.yml")
-    assert True
+    assert isinstance(dic, dict)
+    assert dic['Regulation network']
+
+
+def test_categories():
+    helper.category_list_address = "../../paper_helper/resources/data/db_categories.yml"
+    category_list = helper.get_categories("microPIR")
+    assert isinstance(category_list, list)
+    assert 'miRNA' in category_list[0]
+    pass
+
+
+def test_get_all_categories():
+
+    pass

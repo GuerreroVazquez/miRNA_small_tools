@@ -26,3 +26,8 @@ def write_dictionary_to_csv(file_name="x.csv", dic=None):
 def yml_to_dict(file_name="paper_helper/resources/data/db_categories.yml"):
     my_dict = bios.read(file_name)
     return my_dict
+
+def get_soup_from_html(self, url):
+    req = requests.get(url)
+    soup = BeautifulSoup(req.content, 'html.parser')
+    return soup
