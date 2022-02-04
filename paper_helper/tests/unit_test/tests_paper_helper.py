@@ -8,6 +8,12 @@ from paper_helper.common_tools import get_list_from_file, yml_to_dict, get_csv_i
 from paper_helper.paper_helper import RecollectPapers
 
 helper = RecollectPapers()
+short_csv = [{'database': 'Antagomirbase', 'year': '2011', 'Organism': 'Unspecified',
+              'Website': 'http://bioinfopresidencycollegekolkata.edu.in/antagomirs.html', 'Download': 'No',
+              'Available': 'No',
+              'PubmedID': '21904438'},
+             {'database': 'ARN', 'year': '2016', 'Organism': 'Unspecified', 'Website': 'http://210.27.80.93/arn/',
+              'Download': 'No', 'Available': 'Yes', 'PubmedID': '27503118'}]
 
 
 def test_find_amount():
@@ -31,18 +37,13 @@ def test_get_number_of_cites(monkeypatch):
 
 
 def test_get_list_from_file():
-    databases = get_list_from_file(file_name="../../paper_helper/resources/data/human_only_databases_list.txt")
+    databases = get_list_from_file(file_name="../../resources/data/human_only_databases_list.txt")
     assert isinstance(databases, list)
 
 
 def test_get_paper_data(monkeypatch):
     helper.category_list_address = "../../paper_helper/resources/data/db_categories.yml"
-    short_csv = [{'database': 'Antagomirbase', 'year': '2011', 'Organism': 'Unspecified',
-                  'Website': 'http://bioinfopresidencycollegekolkata.edu.in/antagomirs.html', 'Download': 'No',
-                  'Available': 'No',
-                  'PubmedID': '21904438'},
-                 {'database': 'ARN', 'year': '2016', 'Organism': 'Unspecified', 'Website': 'http://210.27.80.93/arn/',
-                  'Download': 'No', 'Available': 'Yes', 'PubmedID': '27503118'}]
+
     monkeypatch.setattr(common_tools, "get_csv_into_dictionary", lambda *args, **kwargs: short_csv)
     dic = helper.get_paper_data_from_file(file_name="../test_resources/papers_data.csv")
     assert isinstance(dic, dict)
@@ -50,19 +51,32 @@ def test_get_paper_data(monkeypatch):
 
 
 def test_get_yml_from_file():
-    dic = yml_to_dict(file_name="../../paper_helper/resources/data/db_categories.yml")
+    dic = yml_to_dict(file_name="../../resources/data/db_categories.yml")
     assert isinstance(dic, dict)
     assert dic['Regulation network']
 
 
 def test_categories():
-    helper.category_list_address = "../../paper_helper/resources/data/db_categories.yml"
+    helper.category_list_address = r"C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" \
+                                   r"\resources\data\db_categories.yml"
     category_list = helper.get_categories("microPIR")
     assert isinstance(category_list, list)
     assert 'miRNA' in category_list[0]
     pass
 
+def test_get_information():
+    helper.information_list_address = r"C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" \
+                                   r"\resources\data\db_information.yml"
+    information_list = helper.get_information("mirbase")
+    assert isinstance(information_list, list)
+    assert 'miRNA/Target interactions' in information_list
 
-def test_get_all_categories():
+def test_write_list_of_dict():
+    helper.write_list_of_dict(short_csv)
 
+
+def test_merge_article_files_by():
+    helper.merge_article_files_by(files_2_merge=["../../resources/pareto_fronts_databases/papers_data.csv",
+                                                 "../../resources/pareto_fronts_databases/pubmed_results_databses.csv",
+                                                 "../../resources/pareto_fronts_databases/pubmed_results_mirna.csv"])
     pass

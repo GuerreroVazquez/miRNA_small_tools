@@ -1,12 +1,13 @@
 Regulation network:
- ARN
+ - ARN
  - AtmiRNET
  - CircuitsDB
  - NetAge
  - OCDB
  - Psmir
 Disease:
- BioM2Disease
+ - HMDD
+ - BioM2Disease
  - CCGD
  - dbDEMC
  - EpimiRBase
@@ -22,8 +23,8 @@ Disease:
  - SomamiR
  - TMREC
  - OncomiRdbB
-miRNA- target:
- ceRDB
+miRNA - target:
+ - ceRDB
  - ComiRNet
  - comTAR
  - ExprTargetDB
@@ -43,7 +44,7 @@ miRNA- target:
  - miRGate
  - targetHub
  - miRNAMap
- - miRNA -  target gene
+miRNA - target gene:
  - miRNA_Targets
  - miRNEST
  - miRSel
@@ -66,13 +67,13 @@ miRNA- target:
  - microPIR
  - PAmiRDB
 Pathway analysis:
-  DIANA miRPath
+  - DIANA miRPath
   - miRHrt
   - miRnalyze
   - miRNApath
   - miRPathDB
 SNPS:
- dPORE
+ - dPORE
  - miRdSNP
  - MiRSNP
  - miRNA SNiPer
@@ -81,12 +82,12 @@ SNPS:
  - miRNASNP
  - CREAM
 Functional annotation:
- miRGator
+ - miRGator
  - miRNA Body Map
  - MiRFANS
  - SorghumFDB
 Specifics:
- Antagomirbase
+ - Antagomirbase
  - miRStress
  - CoGemiR
  - doRiNA
