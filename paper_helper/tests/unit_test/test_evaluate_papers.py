@@ -34,8 +34,8 @@ def test_is_pareto_efficient():
         for c in costs[ixs]:
             assert np.all(np.any(c <= costs, axis=1))
 
-def test_get_pareto_cites_year():
 
+def test_get_pareto_cites_year():
     papers = evaluator.get_pareto_cites_year(plot=True)
     pareto = [{'database': 'Antagomirbase', 'year': '2011',
                'Organism': 'Unspecified',
