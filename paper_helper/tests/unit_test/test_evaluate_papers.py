@@ -1,6 +1,5 @@
 import pytest
 
-from paper_helper import common_tools
 
 import numpy as np
 
