@@ -4,9 +4,9 @@ import csv
 import numpy as np
 import logging
 
-from common_tools import get_csv_into_dictionary, yml_to_dict, get_soup_from_html
+from paper_helper.common_tools import get_csv_into_dictionary, yml_to_dict, get_soup_from_html
 from logging.config import dictConfig
-from resources.file_adress import DatabasesDataset
+from paper_helper.resources.file_adress import DatabasesDataset
 import datetime
 
 version_str = f'This run is running with versions:\n' \
@@ -95,7 +95,7 @@ class RecollectPapers:
         returns a list of dictionary where every entry is a paper.
         :param file_name:
         :param paper_data:
-        :return: dict
+        :return: list dict
         """
         if not paper_data:
             logging.info(f"Reading file {file_name}")

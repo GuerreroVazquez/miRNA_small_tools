@@ -1,3 +1,3 @@
-'database', 'year', 'Organism', 'Website', 'Download', 'Available', 'PubmedID'
-'Antagomirbase', '2011', 'Unspecified', 'http://bioinfopresidencycollegekolkata.edu.in/antagomirs.html', 'No', 'No', '21904438'
-'ARN', '2016', 'Unspecified', 'http://210.27.80.93/arn/', 'No', 'Yes', '27503118'
+"database", "year", "Organism", "Website", "Download", "Available", "PubmedID"
+"Antagomirbase", "2011", "Unspecified", "http://bioinfopresidencycollegekolkata.edu.in/antagomirs.html", "No", "No", "21904438"
+"ARN", "2016", "Unspecified", "http://210.27.80.93/arn/", "No", "Yes", "27503118"

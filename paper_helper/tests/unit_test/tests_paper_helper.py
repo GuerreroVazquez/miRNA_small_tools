@@ -29,11 +29,11 @@ def test_get_number_of_cites(monkeypatch):
     with open("../test_resources/ncbi_found_article.html", 'r') as file:
         html = file.read()
         html = BeautifulSoup(html, "html.parser")
-    monkeypatch.setattr(RecollectPapers, "get_soup_from_html", lambda *args, **kwargs: html)
+    monkeypatch.setattr(common_tools, "get_soup_from_html", lambda *args, **kwargs: html)
     papers_ids = ["21904438", "14681370"]
     helper.pubmed_ids = papers_ids
     cites = helper.get_number_cites_from_list(papers_ids)
-    assert cites == [128, 128]
+    assert cites == [2, 910]
 
 
 def test_get_list_from_file():
@@ -42,12 +42,19 @@ def test_get_list_from_file():
 
 
 def test_get_paper_data(monkeypatch):
+    """
+    This test will make sure to have all the 8 fields of the datasets;
+    'database', 'year', 'Organism', 'Website', 'Download', 'Available', 'PubmedID', and 'cite_number'
+    :param monkeypatch:
+    :return:
+    """
     helper.category_list_address = "../../paper_helper/resources/data/db_categories.yml"
 
     monkeypatch.setattr(common_tools, "get_csv_into_dictionary", lambda *args, **kwargs: short_csv)
-    dic = helper.get_paper_data_from_file(file_name="../test_resources/papers_data.csv")
-    assert isinstance(dic, dict)
-    assert len(dic) == 2
+    dics = helper.get_paper_data_from_file(file_name="../test_resources/papers_data.csv")
+    assert isinstance(dics, list)
+    dic = dics[0]
+    assert len(dic) == 8
 
 
 def test_get_yml_from_file():
@@ -57,26 +64,26 @@ def test_get_yml_from_file():
 
 
 def test_categories():
-    helper.category_list_address = r"C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" \
-                                   r"\resources\data\db_categories.yml"
+    helper.category_list_address = r"../../resources/data/db_categories.yml"
     category_list = helper.get_categories("microPIR")
     assert isinstance(category_list, list)
-    assert 'miRNA' in category_list[0]
+    assert 'miRNA - target -' in category_list[0]
     pass
 
+
 def test_get_information():
-    helper.information_list_address = r"C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" \
-                                   r"\resources\data\db_information.yml"
+    helper.information_list_address = r"../../resources/data/db_information.yml"
     information_list = helper.get_information("mirbase")
     assert isinstance(information_list, list)
-    assert 'miRNA/Target interactions' in information_list
+    assert 'miRNA/Target interactions - ' in information_list
+
 
 def test_write_list_of_dict():
     helper.write_list_of_dict(short_csv)
 
 
 def test_merge_article_files_by():
-    helper.merge_article_files_by(files_2_merge=["../../resources/pareto_fronts_databases/papers_data.csv",
-                                                 "../../resources/pareto_fronts_databases/pubmed_results_databses.csv",
-                                                 "../../resources/pareto_fronts_databases/pubmed_results_mirna.csv"])
+    helper.merge_article_files_by(files_2_merge=["../../resources/data/pareto_fronts_databases/papers_data.csv",
+                                                 "../../resources/data/pareto_fronts_databases/pubmed_results_databses.csv",
+                                                 "../../resources/data/pareto_fronts_databases/pubmed_results_mirna.csv"])
     pass
