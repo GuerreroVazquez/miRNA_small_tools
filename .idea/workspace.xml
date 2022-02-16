@@ -4,21 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b38e0efc-dcbe-49ff-82e4-a2ec565a5cd7" name="Changes" comment="">
+    <list default="true" id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/paper_helper/tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/paper_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/paper_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/tests/unit_test/datasets_pareto_front.csv" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/tests/unit_test/datasets_pareto_front.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2595H0UnV1UW1en3li0C40hQV6x" />
+  <component name="ProjectId" id="24SPVDEk8EquDMJb3uEbVRTGjGu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -30,15 +49,170 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mirnadbs/bin/pip3.8" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <recent name="$PROJECT_DIR$/paper_helper" />
+      <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper\resources\data\pareto_fronts_databases" />
+      <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper\resources\data" />
+      <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for tests_paper_helper.test_get_paper_data">
+    <configuration name="Python tests for paper_helper.tests.unit_test.test_evaluate_papers.test_is_pareto_efficient" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;paper_helper.tests.unit_test.test_evaluate_papers.test_is_pareto_efficient&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests_paper_helper.test_get_information" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests_paper_helper.test_get_information&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests_paper_helper.test_get_paper_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests_paper_helper.test_get_paper_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_evaluate_papers.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/paper_helper/tests/unit_test/test_evaluate_papers.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests_paper_helper.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for tests_paper_helper" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../mirnadbs/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests_paper_helper&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
+        <item itemvalue="Python tests.pytest for tests_paper_helper" />
+        <item itemvalue="Python tests.Python tests in tests_paper_helper.py" />
+        <item itemvalue="Python tests.Python tests in test_evaluate_papers.py" />
+        <item itemvalue="Python tests.Python tests for paper_helper.tests.unit_test.test_evaluate_papers.test_is_pareto_efficient" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b38e0efc-dcbe-49ff-82e4-a2ec565a5cd7" name="Changes" comment="" />
-      <created>1644926369837</created>
+      <changelist id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="" />
+      <created>1643621038812</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1644926369837</updated>
+      <updated>1643621038812</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/paper_helper.py</url>
+          <line>175</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/paper_helper.py</url>
+          <line>319</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/paper_helper.py</url>
+          <line>128</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/paper_helper.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
