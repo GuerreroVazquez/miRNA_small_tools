@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/paper_helper/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paper_helper/column_divider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/paper_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/paper_helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/tests/unit_test/datasets_pareto_front.csv" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/tests/unit_test/datasets_pareto_front.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
