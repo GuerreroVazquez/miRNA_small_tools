@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/paper_helper/test_column_divider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paper_helper/sql_operations.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paper_helper/column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/column_divider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paper_helper/common_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/common_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/resources/file_adress.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/resources/file_adress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/test_column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/test_column_divider.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,20 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests for test_column_divider.test_getting_file">
+    <configuration name="Python tests for test_column_divider.test_get_sql" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_column_divider.test_get_sql&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_column_divider.test_getting_file" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,20 +100,6 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;tests_paper_helper.test_get_paper_data&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests in test_evaluate_papers.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="miRNA_small_tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/paper_helper/tests/unit_test/test_evaluate_papers.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in tests_paper_helper.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -134,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_column_divider.test_getting_file" />
+        <item itemvalue="Python tests.Python tests for test_column_divider.test_get_sql" />
         <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
         <item itemvalue="Python tests.pytest for tests_paper_helper" />
         <item itemvalue="Python tests.Python tests in tests_paper_helper.py" />
-        <item itemvalue="Python tests.Python tests in test_evaluate_papers.py" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +191,16 @@
           <url>file://$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py</url>
           <line>75</line>
           <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/column_divider.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/column_divider.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="145" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

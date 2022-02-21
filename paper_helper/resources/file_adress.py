@@ -9,5 +9,9 @@ class DatabasesDataset(Enum):
     mirna_database = "pubmed_results_databses.csv"  # ("database"[Title] OR "repository"[Title] OR
     # "dataset"[Title]) AND ("miRNA"[Title] OR "microRNA"[Title] OR "micro RNA"[Title])
     database_categories = "db_categories.yml"
-    pareto_front_merge = "pareto_fronts_databases/merge.csv" # The merge of the 3
+    pareto_front_merge = "pareto_fronts_databases/merge.csv"  # The merge of the 3
     # pareto fronts generated for chapter7, all_mirna and  mirna_database
+    datasets_folder = "/home/karen/Documents/phd/year1/Databases/"
+
+    def get(self):
+        return self.value

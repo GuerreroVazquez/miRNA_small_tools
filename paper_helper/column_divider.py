@@ -5,6 +5,8 @@
 ###
 import resources.datasets_values as dv
 import pandas as pd
+from paper_helper.resources.file_adress import DatabasesDataset as paths
+from sql_metadata import Parser
 
 
 def get_binding_columns():
@@ -14,20 +16,42 @@ def get_binding_columns():
     :return:
     """
 
-def get_data_from_databse(datbase_name:dv.DatasetValues):
+
+def get_data_from_databse(database_name: dv.DatasetValues):
     """
     This function will get the file and load the data in a dataframe
-    :param datbase_name: The name of the
+    :param database_name: The name of the
     :return:
     """
-    files = datbase_name.get_file()
-    sep = 
+    files = database_name.get_file()
+
+    columns = database_name.get_columns()
     for file in files:
-        df = pd.read_csv(file, sep=sep, header=header)
+        df = get_dataframe_from_file(database_name=database_name, file=file, first_column=columns[0])
+        df.columns = database_name.get_columns()
+        binding_columns = ['mrna', 'binding_site', 'sequence', 'source', 'tmpmirna',
+                           'tmpprobability']
+        new_df = pd.DataFrame([], columns=binding_columns)
+        for bc in binding_columns:
+            equivalent_columns = database_name.get_consensus_column_name(bc)
+            for column in equivalent_columns:
+                if column in df.columns:
+                    new_df[bc] = df[column]
+        new_df['source']=database_name.value
+        pass
+
     pass
 
 
+def get_dataframe_from_file(database_name: str, file: str, first_column: str):
+    sep = database_name.get_sep()
+    full_path = paths.datasets_folder.get() + database_name.value + "/" + file
+    with open(full_path, 'r') as f:
+        first_value = f.readline().split(sep)[0]
+        if first_value == first_column[0]:
+            header = 0
+        else:
+            header = None
 
-
-
-
+    df = pd.read_csv(full_path, sep=sep, header=header)
+    return df
