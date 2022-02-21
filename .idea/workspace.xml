@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/paper_helper/column_divider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paper_helper/test_column_divider.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/column_divider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/common_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/common_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,15 +51,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/paper_helper/tests/unit_test" />
       <recent name="$PROJECT_DIR$/paper_helper" />
+      <recent name="$PROJECT_DIR$/paper_helper/tests/unit_test" />
       <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper\resources\data\pareto_fronts_databases" />
       <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper\resources\data" />
       <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests_paper_helper.test_get_paper_data">
-    <configuration name="Python tests for paper_helper.tests.unit_test.test_evaluate_papers.test_is_pareto_efficient" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_column_divider.test_getting_file">
+    <configuration name="Python tests for test_column_divider.test_getting_file" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,21 +69,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;paper_helper.tests.unit_test.test_evaluate_papers.test_is_pareto_efficient&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests_paper_helper.test_get_information" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="miRNA_small_tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests_paper_helper.test_get_information&quot;" />
+      <option name="_new_target" value="&quot;test_column_divider.test_getting_file&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -144,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_column_divider.test_getting_file" />
         <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
         <item itemvalue="Python tests.pytest for tests_paper_helper" />
         <item itemvalue="Python tests.Python tests in tests_paper_helper.py" />
         <item itemvalue="Python tests.Python tests in test_evaluate_papers.py" />
-        <item itemvalue="Python tests.Python tests for paper_helper.tests.unit_test.test_evaluate_papers.test_is_pareto_efficient" />
       </list>
     </recent_temporary>
   </component>

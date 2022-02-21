@@ -16,6 +16,12 @@ def get_csv_into_dictionary(file_name="resources/data/human_only_databases_list.
         dic = [{k: str(v) for k, v in row.items()}
                for row in csv.DictReader(f, skipinitialspace=True)]
     return dic
+import pandas as pd
+
+
+def get_file_into_dataframe(file_name="resources/data/human_only_databases_list.txt", sep="\t", header=0):
+    df = pd.read_csv(file_name, sep=sep, header=header)
+    return df
 
 
 def write_dictionary_to_csv(file_name="x.csv", dic=None):
