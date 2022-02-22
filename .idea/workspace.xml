@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/paper_helper/sql_operations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paper_helper/test_sql_connections.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/column_divider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/common_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/common_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/resources/file_adress.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/resources/file_adress.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper_helper/test_column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/test_column_divider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/sql_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/sql_operations.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mirnadbs/bin/pip3.8" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -59,7 +56,7 @@
       <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_column_divider.test_getting_file">
+  <component name="RunManager" selected="Python tests.Python tests for test_sql_connections.test_query_connection">
     <configuration name="Python tests for test_column_divider.test_get_sql" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,6 +85,37 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_sql_connections.test_query_connection" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sql_connections.test_query_connection&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_sql_connections.test_sql_connection" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="miRNA_small_tools" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONPATH" value="$PROJECT_DIR$/paper_helper" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sql_connections.test_sql_connection&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for tests_paper_helper.test_get_paper_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,43 +130,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests in tests_paper_helper.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="miRNA_small_tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/paper_helper/tests/unit_test/tests_paper_helper.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for tests_paper_helper" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="miRNA_small_tools" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../../mirnadbs/bin/python3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests_paper_helper&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python tests.Python tests for test_column_divider.test_get_sql" />
+      <item itemvalue="Python tests.Python tests for test_column_divider.test_getting_file" />
+      <item itemvalue="Python tests.Python tests for test_sql_connections.test_sql_connection" />
+      <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
+      <item itemvalue="Python tests.Python tests for test_sql_connections.test_query_connection" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_sql_connections.test_query_connection" />
+        <item itemvalue="Python tests.Python tests for test_sql_connections.test_sql_connection" />
         <item itemvalue="Python tests.Python tests for test_column_divider.test_getting_file" />
         <item itemvalue="Python tests.Python tests for test_column_divider.test_get_sql" />
         <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
-        <item itemvalue="Python tests.pytest for tests_paper_helper" />
-        <item itemvalue="Python tests.Python tests in tests_paper_helper.py" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +206,16 @@
           <url>file://$PROJECT_DIR$/paper_helper/column_divider.py</url>
           <line>40</line>
           <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/test_sql_connections.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/paper_helper/sql_operations.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="154" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
