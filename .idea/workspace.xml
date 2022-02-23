@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6096fee0-4239-46b5-8a37-4ea85298a8e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/paper_helper/test_sql_connections.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/column_divider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/common_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/common_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/paper_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/paper_helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paper_helper/sql_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/sql_operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper_helper/test_column_divider.py" beforeDir="false" afterPath="$PROJECT_DIR$/paper_helper/test_column_divider.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,19 +59,27 @@
       <recent name="C:\Users\crtuser\Documents\PhD\Project\repos\miRNA_small_tools\paper_helper" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_sql_connections.test_query_connection">
-    <configuration name="Python tests for test_column_divider.test_get_sql" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.column_divider">
+    <configuration name="column_divider" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYTHONPATH" value="$PROJECT_DIR$/paper_helper" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_column_divider.test_get_sql&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/paper_helper/column_divider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_column_divider.test_getting_file" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -85,7 +96,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_sql_connections.test_query_connection" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_column_divider.test_process_all_files" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,55 +106,52 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sql_connections.test_query_connection&quot;" />
+      <option name="_new_target" value="&quot;test_column_divider.test_process_all_files&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_sql_connections.test_sql_connection" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_column_divider.test_process_all_files_for_diana" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONPATH" value="$PROJECT_DIR$/paper_helper" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_sql_connections.test_sql_connection&quot;" />
+      <option name="_new_target" value="&quot;test_column_divider.test_process_all_files_for_diana&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for tests_paper_helper.test_get_paper_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_column_divider.test_process_all_files_for_miRTarBase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="miRNA_small_tools" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper/tests/unit_test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/paper_helper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests_paper_helper.test_get_paper_data&quot;" />
+      <option name="_new_target" value="&quot;test_column_divider.test_process_all_files_for_miRTarBase&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Python tests for test_column_divider.test_get_sql" />
+      <item itemvalue="Python.column_divider" />
       <item itemvalue="Python tests.Python tests for test_column_divider.test_getting_file" />
-      <item itemvalue="Python tests.Python tests for test_sql_connections.test_sql_connection" />
-      <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
-      <item itemvalue="Python tests.Python tests for test_sql_connections.test_query_connection" />
+      <item itemvalue="Python tests.Python tests for test_column_divider.test_process_all_files" />
+      <item itemvalue="Python tests.Python tests for test_column_divider.test_process_all_files_for_diana" />
+      <item itemvalue="Python tests.Python tests for test_column_divider.test_process_all_files_for_miRTarBase" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_sql_connections.test_query_connection" />
-        <item itemvalue="Python tests.Python tests for test_sql_connections.test_sql_connection" />
+        <item itemvalue="Python.column_divider" />
+        <item itemvalue="Python tests.Python tests for test_column_divider.test_process_all_files_for_diana" />
+        <item itemvalue="Python tests.Python tests for test_column_divider.test_process_all_files" />
+        <item itemvalue="Python tests.Python tests for test_column_divider.test_process_all_files_for_miRTarBase" />
         <item itemvalue="Python tests.Python tests for test_column_divider.test_getting_file" />
-        <item itemvalue="Python tests.Python tests for test_column_divider.test_get_sql" />
-        <item itemvalue="Python tests.Python tests for tests_paper_helper.test_get_paper_data" />
       </list>
     </recent_temporary>
   </component>
@@ -198,24 +206,14 @@
           <option name="timeStamp" value="116" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/paper_helper/column_divider.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/paper_helper/column_divider.py</url>
-          <line>40</line>
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/paper_helper/test_sql_connections.py</url>
           <line>20</line>
           <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/paper_helper/sql_operations.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="154" />
+          <url>file://$PROJECT_DIR$/paper_helper/column_divider.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

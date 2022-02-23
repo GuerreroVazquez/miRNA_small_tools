@@ -2,6 +2,7 @@ import csv
 import bios
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 
 def get_list_from_file(file_name="resources/data/human_only_databases_list.txt"):

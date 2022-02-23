@@ -4,9 +4,9 @@ import csv
 import numpy as np
 import logging
 
-from paper_helper.common_tools import get_csv_into_dictionary, yml_to_dict, get_soup_from_html
+from common_tools import get_csv_into_dictionary, yml_to_dict, get_soup_from_html
 from logging.config import dictConfig
-from paper_helper.resources.file_adress import DatabasesDataset
+from resources.file_adress import DatabasesDataset
 import datetime
 
 version_str = f'This run is running with versions:\n' \

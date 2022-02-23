@@ -34,7 +34,7 @@ def run_query(query: str):
             print("Connected to MySQL Server version ", db_Info)
             cursor = cnx.cursor()
             cursor.execute(query)
-            record_dataframe =  pd.read_sql(query,cnx)
+            record_dataframe = pd.read_sql(query, cnx)
             cnx.close()
             return record_dataframe
 
