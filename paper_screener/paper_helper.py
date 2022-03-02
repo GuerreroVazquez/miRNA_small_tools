@@ -108,7 +108,7 @@ class RecollectPapers:
             logging.error(f"CSV file is not complete")
             raise Exception("Missing necessary values in the csv file")
         logging.info(f'Getting number of cites and categories')
-        with open("../paper_helper/Temporal_file.tmp", 'w') as f:
+        with open("../../../paper_helper/Temporal_file.tmp", 'w') as f:
             for paper in paper_data:
                 try:
                     logging.info(f'getting {paper["database"]}')

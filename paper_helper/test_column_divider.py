@@ -25,25 +25,30 @@ def test_getting_file(monkeypatch):
     assert first_row[0] == 'NM_001001398', "The first value is not ok"
     assert True
 
+
 def test_process_all_files_for_diana(monkeypatch):
     def fake_folder(*args, **kwargs):
         fake = DatabasesDataset.datasets_folder
         fake_str = fake.value + 'mini_test/'
         return fake_str
+
     monkeypatch.setattr("paper_helper.resources.file_adress.DatabasesDataset.get", fake_folder)
     database = dv.DatasetValues.DianaTed
     column_divider.process_all_files(database)
     assert True
+
 
 def test_process_all_files_for_miRTarBase(monkeypatch):
     def fake_folder(*args, **kwargs):
         fake = DatabasesDataset.datasets_folder
         fake_str = fake.value + 'mini_test/'
         return fake_str
+
     monkeypatch.setattr("paper_helper.resources.file_adress.DatabasesDataset.get", fake_folder)
     database = dv.DatasetValues.mirTarBase
     column_divider.process_all_files(database)
     assert True
+
 
 def test_process_all_files(monkeypatch):
     def fake_folder(*args, **kwargs):

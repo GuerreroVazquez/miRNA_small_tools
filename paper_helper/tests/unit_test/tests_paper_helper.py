@@ -30,7 +30,8 @@ def test_get_number_of_cites(monkeypatch):
     papers_ids = ["21904438", "14681370"]
     helper.pubmed_ids = papers_ids
     cites = helper.get_number_cites_from_list(papers_ids)
-    assert cites == [2, 910]
+    assert cites[0] >= 2, "in january 2022 it was 2, so there could not be less than that"
+    assert cites[1] >= 910, "in january 2022 it was 910, so there could not be less than that"
 
 
 def test_get_list_from_file():
