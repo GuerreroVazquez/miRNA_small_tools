@@ -1,11 +1,8 @@
-import pytest
-import requests
-import numpy as np
 from bs4 import BeautifulSoup
 
 from paper_helper import common_tools
-from paper_helper.common_tools import get_list_from_file, yml_to_dict, get_csv_into_dictionary
-from paper_helper.paper_helper import RecollectPapers
+from paper_helper.common_tools import get_list_from_file, yml_to_dict
+from paper_screener.paper_helper import RecollectPapers
 
 helper = RecollectPapers()
 short_csv = [{'database': 'Antagomirbase', 'year': '2011', 'Organism': 'Unspecified',

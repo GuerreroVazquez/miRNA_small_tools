@@ -3,10 +3,9 @@
 import csv
 import numpy as np
 import logging
-
-from common_tools import get_csv_into_dictionary, yml_to_dict, get_soup_from_html
+from paper_helper.common_tools import get_csv_into_dictionary, yml_to_dict, get_soup_from_html
 from logging.config import dictConfig
-from resources.file_adress import DatabasesDataset
+from paper_helper.resources.file_adress import DatabasesDataset
 import datetime
 
 version_str = f'This run is running with versions:\n' \
@@ -14,7 +13,7 @@ version_str = f'This run is running with versions:\n' \
               f'\t - numpy {np.__version__}' \
               f'\t - logging {csv.__version__}' \
               f'Starting the {datetime.datetime.now()}'
-logging.basicConfig(filename="paper_helper.log", level=logging.INFO)
+logging.basicConfig(filename="../paper_helper/paper_helper.log", level=logging.INFO)
 
 
 class RecollectPapers:
@@ -109,7 +108,7 @@ class RecollectPapers:
             logging.error(f"CSV file is not complete")
             raise Exception("Missing necessary values in the csv file")
         logging.info(f'Getting number of cites and categories')
-        with open("Temporal_file.tmp", 'w') as f:
+        with open("../paper_helper/Temporal_file.tmp", 'w') as f:
             for paper in paper_data:
                 try:
                     logging.info(f'getting {paper["database"]}')

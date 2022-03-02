@@ -1,6 +1,4 @@
-import pytest
-
-import sql_operations as sql
+from database_analysis import sql_operations as sql
 
 
 def test_sql_connection():
