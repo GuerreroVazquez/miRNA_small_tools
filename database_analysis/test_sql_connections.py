@@ -14,6 +14,6 @@ def test_sql_connection():
 
 
 def test_query_connection():
-    query= "select * from mirna_pre_mature LIMIT 1"
+    query = "select * from mirna_pre_mature LIMIT 1"
     result = sql.run_query(query=query)
-    assert result
+    assert not result.empty

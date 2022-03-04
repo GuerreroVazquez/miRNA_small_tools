@@ -132,3 +132,4 @@ dmypy.json
 paper_helper/resources*
 .idea/workspace.xml
 .idea/miRNA_small_tools.iml
+*.iml
