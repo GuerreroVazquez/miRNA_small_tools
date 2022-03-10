@@ -1,19 +1,45 @@
 # ###This class is going to rename the columns of gene in the new binding table ### #
 # ### to unify the names.
+import time
+
 from ncbi import eutilities
 from database_analysis import sql_operations as sql
 from logs import logger
+
 ncbi_connection = eutilities.EutilsConnection(eutilities.NCBIDatabases.Nucleotides)
 
 
-def get_gene(provitional_gene):
-    id = ncbi_connection.fetch_queries_ids(term=provitional_gene)
-    if len(id) < 1:
+def get_genes(provitional_gene):
+    ids = ncbi_connection.fetch_queries_ids(term=provitional_gene, get_first =False)
+    if len(ids) < 1:
         logger.error(f"The gene {provitional_gene} couldn't be found in NCBI")
         return None
-    id = id[0]
-    result = ncbi_connection.get_id_information(db_id=id)
-    gene = result.gene
+    genes = []
+    for gene in ids:
+        result = ncbi_connection.get_id_information(db_id=gene)
+        gene = result.gene
+        if gene is None:
+            logger.warning(f"There was no gene name for {provitional_gene} with Id {id}")
+        genes.append(gene)
+        time.sleep(1)
+    return genes
+
+
+def get_gene(provitional_gene):
+    id = 0
+    try:
+        id = ncbi_connection.fetch_queries_ids(term=provitional_gene)
+        if len(id) < 1:
+            logger.error(f"The gene {provitional_gene} couldn't be found in NCBI")
+            return None
+        id = id[0]
+        result = ncbi_connection.get_id_information(db_id=id)
+        # gene = result.gene
+        # if gene is None:
+        gene = result.acv
+    except Exception as e:
+        logger.error( f"Assigning None on {provitional_gene}")
+        gene = None
     if gene is None:
         logger.warning(f"There was no gene name for {provitional_gene} with Id {id}")
     logger.info(f"The name for {provitional_gene} will be {gene}")
@@ -21,14 +47,16 @@ def get_gene(provitional_gene):
 
 
 def convert_all_genes():
-    query = "Select DISTINCT mrna from binding  where mrna like 'XM_%' or mrna like 'NM_%'"
+    query = "Select DISTINCT mrna from binding  where mrna like 'XM_%' or mrna like 'NM_0%' "
     genes = sql.get_query(query=query)['mrna']
     if len(genes) < 1:
         logger.info(f"No genes found in binding with query {query}")
         return
     logger.info(f"Evaluating names of {len(genes)} genes.")
     failed_updates = []
-    with open("Temporal_file.txt", 'w') as f:
+    full_query = ""
+    blocks = 0
+    with open("update_genes.sql", 'a') as f:
         for gene in genes:
             logger.info(f"Evaluating {gene}")
             real_name = get_gene(gene)
@@ -51,18 +79,21 @@ def convert_all_genes():
             # viejo = sql.run_query(query=query)
             update_query = f"UPDATE binding SET" \
                            f" mrna = '{real_name}'" \
-                           f" WHERE mrna='{gene}';"
+                           f" WHERE mrna='{gene}'; "
+            full_query = full_query + update_query
             f.write(update_query + "\n")
-            f.flush()
-            rows = sql.run_query(query=update_query)
-            logger.info(f" {rows} Affected")
-            if rows < 1:
-                logger.warning(f"Gene {gene} couldn't been updated.")
-                failed_updates.append(gene)
-            # query = f"Select * from binding where mrna = '{real_name}' limit 10"
-            # nuevo = sql.run_query(query=query)
-    return failed_updates
+            if blocks > 99:
+                rows = sql.run_query(query=full_query)
+                blocks = 0
+                full_query = ""
+                if rows < 1:
+                    logger.warning(f"Section {full_query} couldn't been updated.")
+                    failed_updates.append(gene)
+            blocks = blocks + 1
 
+        nuevo = sql.run_query(query=full_query)
+
+    return failed_updates
 
 
 def modify_gene():
@@ -71,4 +102,6 @@ def modify_gene():
 
 if __name__ == '__main__':
     convert_all_genes()
+    x = get_genes("sarcopenia ")
+    print( x )
     pass

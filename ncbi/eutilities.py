@@ -22,6 +22,7 @@ class NCBIDatabases(enum.Enum):
         self.main_attribute = main_attribute
 
     Nucleotides = 'nuccore', 'gbseqs'
+    Genes = 'gene', ''
 
 
 class EutilsConnection():
