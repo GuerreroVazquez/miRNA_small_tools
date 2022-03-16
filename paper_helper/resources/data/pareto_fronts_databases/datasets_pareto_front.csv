@@ -1,0 +1,9 @@
+##Files from article 2021 chapter 7
+'database', 'year', 'Organism', 'Website', 'Download', 'Available', 'PubmedID', 'cite_number', 'categories'
+'HMDD', '2015', 'Homo sapiens', 'http://202.38.126.151/hmdd/mirna/md/', 'No', 'No', '18923704', 389, 'Disease'
+'microRNA.org', '2008', 'Miscellaneous', 'http://www.microrna.org/', 'No', 'No', '18158296', 1270, 
+'mirDIP', '2017', 'Miscellaneous', 'http://ophid.utoronto.ca/mirDIP/', 'Yes', 'Yes', '21364759', 111, 'miRNA- target'
+'miRTarBase', '2010', 'Miscellaneous', 'http://mirtarbase.mbc.nctu.edu.tw/', 'Yes', 'Yes', '21071411', 563, 'miRNA- target'
+'mirtronDB', '2019', 'Plants', 'http://mirtrondb.cp.utfpr.edu.br/', 'Yes', 'Yes', '30874795', 5, 'Specifics'
+'smiRNAdb', '2007', 'Miscellaneous', 'http://www.mirz.unibas.ch/cloningprofiles/', 'No', 'No', '17604727', 1817, 
+'TargetScanS', '2005', 'Miscellaneous', 'http://genes.mit.edu/tscan/targetscanS2005.html', 'No', 'Yes', '15652477', 5521, 'miRNA- target'
