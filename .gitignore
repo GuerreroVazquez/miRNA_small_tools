@@ -130,6 +130,5 @@ dmypy.json
 
 
 # resources
-paper_helper/resources*
 
 .idea/workspace.xml
