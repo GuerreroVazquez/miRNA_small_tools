@@ -1,3 +1,4 @@
+# This file takes care of the information of the databases
 from enum import Enum
 
 

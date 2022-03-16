@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-import paper_helper.resources.datasets_values as dv
+from paper_helper.resources import datasets_values as dv
 from paper_helper import column_divider
 from paper_helper.resources.file_adress import DatabasesDataset
 

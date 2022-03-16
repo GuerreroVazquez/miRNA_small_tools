@@ -11,7 +11,8 @@ class DatabasesDataset(Enum):
     database_categories = "db_categories.yml"
     pareto_front_merge = "pareto_fronts_databases/merge.csv"  # The merge of the 3
     # pareto fronts generated for chapter7, all_mirna and  mirna_database
-    datasets_folder = "/home/karen/Documents/phd/year1/Databases/"
+    # datasets_folder = "/home/karen/Documents/phd/year1/Databases/"
+    datasets_folder = "/media/karen/A0000B91000B6E1A/Users/crtuser/Documents/PhD/Project/Databases/"
 
     def get(self):
         return self.value

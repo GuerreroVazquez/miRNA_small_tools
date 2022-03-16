@@ -3,7 +3,7 @@
 # databases. For this I will annotate them on a header(?) maybe, maybe a dictionary
 # with the equivalences
 ###
-import resources.datasets_values as dv
+from resources import datasets_values as dv
 import pandas as pd
 from resources.file_adress import DatabasesDataset as paths
 
@@ -87,6 +87,7 @@ def main():
     :return:
     """
     target_databases = [dv.DatasetValues.mirTarBase, dv.DatasetValues.mirWalk, dv.DatasetValues.miRDB]
+    target_databases = [dv.DatasetValues.miRDB]
     for database in target_databases:
         process_all_files(database)
 
