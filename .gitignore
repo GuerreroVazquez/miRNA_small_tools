@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # resources
-paper_helper/resources*
+# paper_helper/resources*
 .idea/workspace.xml
 .idea/miRNA_small_tools.iml
 *.iml
