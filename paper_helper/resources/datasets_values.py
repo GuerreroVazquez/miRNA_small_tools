@@ -8,6 +8,7 @@ class DatasetValues(Enum):
     hmdd = 'HMDD'
     mirTarBase = 'mirTarBase'
     DianaTed = 'diana_miTed'
+    targetScan = 'targetScan'
 
     def describe(self):
         # self is the member here
@@ -23,7 +24,8 @@ class DatasetValues(Enum):
                'miRDB': '\t',
                'HMDD': '\t',
                'mirTarBase': '\t',
-               'diana_miTed': '\t'}
+               'diana_miTed': '\t',
+               'targetScan': '\t'}
         return sep[self.value]
 
     def get_columns(self):
@@ -33,8 +35,10 @@ class DatasetValues(Enum):
                    'mirTarBase': ["miRTarBase_ID", "miRNA", "Species", "Target_Gene", "Target_Gene_ID", "Species2",
                                   "Target_Site", "Experiments_Support Type", "References"],
                    'diana_miTed': ["S.No", "Sample_ID", "Collection", "Project_ID", "Tissue_or_organ_of_origin",
-                                "Tissue_subregion", "Cell_Line", "Disease", "Organism", "Gender", "Health_state",
-                                "Tissue_definition", "ALL MIRNAS (2464)"]
+                                   "Tissue_subregion", "Cell_Line", "Disease", "Organism", "Gender", "Health_state",
+                                   "Tissue_definition", "ALL MIRNAS (2464)"],
+                   'targetScan': ["miR family", "Seed+m8", "Species ID", "MiRBase ID", "Mature sequence", "Family",
+                                  "Conservation?", "MiRBase Accession"]
                    }
         return columns[self.value]
 
@@ -46,7 +50,7 @@ class DatasetValues(Enum):
         :return: list str: list of possible options to look for
         """
         names = {'mrna': ["mRNA", "Target_Gene"],
-                 'mirna_id': ["miRNA", "mir"],
+                 'mirna_id': ["miRNA", "mir", "MiRBase ID"],
                  'binding_site': ["binding_site"],
                  'sequence': ["duplex", "Target_Site"],
                  'species': ['miRNA', 'Organism', 'Species'],

@@ -88,6 +88,7 @@ def main():
     """
     target_databases = [dv.DatasetValues.mirTarBase, dv.DatasetValues.mirWalk, dv.DatasetValues.miRDB]
     target_databases = [dv.DatasetValues.miRDB]
+    target_databases = [dv.DatasetValues.targetScan]
     for database in target_databases:
         process_all_files(database)
 
