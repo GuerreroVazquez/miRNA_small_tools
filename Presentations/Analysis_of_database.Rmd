@@ -1,0 +1,144 @@
+---
+title: "MiRNA Analysis"
+author: "Karen"
+date: "3/10/2022"
+output: html_document
+---
+```{r libraries}
+
+library(tidyverse)
+
+```
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r mirnas}
+setwd("C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/")
+mirna_genes_unique <- read.csv(file = 'unique_target_gene.csv', sep = "\t", header = F)
+mirna_genes_count <- read.csv(file = 'mirnas_gene_count.csv', sep = "\t", header = F)
+colnames(mirna_genes_unique) <- c("gene", "mirna", "count")
+colnames(mirna_genes_count) <- c("mirna", "count")
+```
+
+## Including Plots
+
+This are the general stats c:
+```{r}
+
+library(pastecs)
+big_number = stat.desc(mirna_genes_count)
+big_number =round(big_number, 0)
+format(big_number, scientific = FALSE, digits = 0)
+summary(mirna_genes_count)
+
+
+```
+
+
+This graph is the amount of diferent target genes that miRNAs have.
+
+```{r mirna, echo=FALSE}
+
+dens = density(mirna_genes_count$count)
+plot (dens)
+ploty = ggplot(mirna_genes_count, aes(x=count))+
+  geom_histogram(aes(y=..density..), bins = 50)+
+  xlim(1,7215)+
+  labs(x="Number of targets", y="Number of miRNAs")+
+  geom_density(colour = 2, size = 1, alpha = 0.75, bw=1000)+
+  ylim(0,0.0004)
+# require(scales)
+ploty  #+ scale_y_continuous(labels = comma)
+
+
+
+one_target <- subset(mirna_genes_count, count ==1)
+dim(one_target)  
+few_targets <- subset(mirna_genes_count, count > 0 & count < 1000)
+dim(few_targets) 
+
+plenty_targets <- subset(mirna_genes_count, count > 4000)
+dim(plenty_targets)
+
+ploty = ggplot(few_targets, aes(x=count))+
+  geom_histogram()+
+  xlim(1,30)+
+  labs(x="Number of targets", y="Number of miRNAs")
+ploty
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+ploty = ggplot(mirna_genes_count, aes(x=count))+
+  #geom_histogram()+
+  geom_density(aes(y=..density.. * (nrow(mirna_genes_count))))+
+  labs(x="Number of targets", y="Number of miRNAs") +
+  geom_vline(xintercept = 159.6, linetype = "dotted", col = "red")+
+  geom_vline(xintercept = 4250.2, linetype = "dotted", col = "red")
+
+  
+  
+ploty  #+ scale_y_continuous(labels = comma)
+
+
+
+
+
+plot(ecdf(mirna_genes_count[,"count"]))
+
+ggplot(mirna_genes_count, aes(x=1:5277, y=cumsum(sort(count, decreasing = F)))) +
+  geom_line()
+
+ggplot(mirna_genes_count, aes(x=1:5277, y=cumsum(count))) +
+  geom_line()
+
+```
+
+
+Colapsing :/
+```{r}
+
+```
+
+
+Now Lets see how they behave in spicies
+```{R miaw}
+
+humans = filter(mirna_genes_count, substr(mirna, 1, 3) == 'hsa')
+
+ploty = ggplot(humans, aes(x=count))+
+  geom_histogram(aes(y=..density..), bins = 50)+
+  xlim(1,7215)+
+  labs(x="Number of targets", y="Number of miRNAs")+
+  # geom_density(colour = 2, size = 1, alpha = 0.75, bw=1000)+
+  ylim(0,0.0004)
+# require(scales)
+ploty  #+ scale_y_continuous(labels = comma)
+
+ploty = ggplot(humans, aes(x=count))+
+  geom_histogram()+
+  labs(x="Number of targets", y="Number of miRNAs")
+ploty
+
+
+one_target <- subset(humans, count ==1)
+dim(one_target) 
+
+ploty = ggplot(humans, aes(x=count))+
+  geom_histogram( bins = 30)+
+  xlim(1,1000)+
+  labs(x="Number of targets", y="Number of miRNAs")
+ploty
+```
