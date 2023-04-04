@@ -127,10 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.idea/miRNA_small_tools.iml
+
 # resources
 # paper_helper/resources*
 .idea/workspace.xml
 .idea/miRNA_small_tools.iml
 *.iml
 database_analysis/Temporal_file.txt
+
 .idea/miRNA_small_tools.iml
+
