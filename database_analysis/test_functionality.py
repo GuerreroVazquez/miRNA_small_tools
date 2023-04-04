@@ -1,6 +1,6 @@
 import pytest
-
-from database_analysis.convert_gene_names import convert_all_genes
+from database_analysis.convert_gene_names import convert_all_genes, get_gene, get_genes_from_transcripts, \
+    ncbi_connection
 from database_analysis.map_gene_transcript import get_gene_names, convert_refseq_2_ensembl
 from ncbi.eutilities import EutilsConnection
 from ncbi.eutilities import NCBIDatabases
@@ -40,4 +40,20 @@ def test_get_id_information():
 def test_convert_get_gene():
     provitional_gene='NM_001328693'
     gene = get_gene(provitional_gene)
-    assert gene == [1040974839]
+    print(gene)
+    assert gene == 'si:dkey-148a17.5'
+
+def test_convert_get_gene_multiple():
+
+    pmids = ['NM_001328693', 'NM_000014', 'NM_000018', 'NM_000022']
+    provitional_gene = ' OR '.join(pmids)
+    gene = get_genes_from_transcripts(provitional_gene)
+    assert gene["NM_001328693"] == 'si:dkey-148a17.5'
+    assert gene["NM_000018"] == 'ACADVL'
+
+
+def get_ids_information():
+
+    ids = [1779421316, 1519154122, 1518499068, 1040974839, 28996492, 28994628, 28994056, 957948862, 484275598]
+    information = ncbi_connection.get_ids_information(db_id=ids)
+    print(information)

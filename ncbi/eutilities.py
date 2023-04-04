@@ -67,3 +67,15 @@ class EutilsConnection():
         egs = self.ec.efetch(db=db, id=db_id)
         information = getattr(egs, self.table)  #
         return information[0]
+    def get_ids_information(self, db_id, db=None):
+        """
+        This function will take  and look for the complete information of that ids
+        :param db: The database where we are going to look
+        :param db_id: The id of the element in that database (maybe table???)
+        :return:
+        """
+        if not db:
+            db = self.db
+        egs = self.ec.efetch(db=db, id=db_id)
+        information = getattr(egs, self.table)  #
+        return information

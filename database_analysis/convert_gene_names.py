@@ -23,6 +23,24 @@ def get_gene(provitional_gene):
     logger.info(f"The name for {provitional_gene} will be {gene}")
     return gene
 
+def get_genes_from_transcripts(provitional_gene):
+    ids = ncbi_connection.fetch_queries_ids(term=provitional_gene)
+    if len(ids) < 1:
+        logger.error(f"The gene {provitional_gene} couldn't be found in NCBI")
+        return None
+    #for id in ids:
+    #id = id[0]
+    results = ncbi_connection.get_ids_information(db_id=ids)
+    dict_transcript_gene = {}
+    for result in results:
+        locus = result.locus
+        if locus in provitional_gene:
+            gene = result.gene
+            if gene is None:
+                logger.warning(f"There was no gene name for {provitional_gene} with Id {ids}")
+            dict_transcript_gene[locus]=gene
+            logger.info(f"The name for {provitional_gene} will be {gene}")
+    return dict_transcript_gene
 
 def get_update_queries(genes):
     """
