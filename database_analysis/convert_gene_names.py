@@ -1,8 +1,12 @@
 # ###This class is going to rename the columns of gene in the new binding table ### #
 # ### to unify the names.
+import re
+
+from logger import logger
+
 from ncbi import eutilities
 from database_analysis import sql_operations as sql
-from logs import logger
+import logs
 ncbi_connection = eutilities.EutilsConnection(eutilities.NCBIDatabases.Nucleotides)
 
 
@@ -20,15 +24,14 @@ def get_gene(provitional_gene):
     return gene
 
 
-def convert_all_genes():
-    query = "Select DISTINCT mrna from binding  where mrna like 'XM_%' or mrna like 'NM_%'"
-    genes = sql.get_query(query=query)['mrna']
-    if len(genes) < 1:
-        logger.info(f"No genes found in binding with query {query}")
-        return
-    logger.info(f"Evaluating names of {len(genes)} genes.")
-    failed_updates = []
-    with open("Temporal_file.txt", 'w') as f:
+def get_update_queries(genes):
+    """
+    Takes a list of transcripts, looks for the actual gene and save it on a temporal file.
+    :param genes:
+    :return:
+    """
+    update_query_list = []
+    with open("Temporal_file.txt", 'a') as f:
         for gene in genes:
             logger.info(f"Evaluating {gene}")
             real_name = get_gene(gene)
@@ -52,13 +55,39 @@ def convert_all_genes():
             update_query = f"UPDATE binding SET" \
                            f" mrna = '{real_name}'" \
                            f" WHERE mrna='{gene}';"
+            update_query_list.append(update_query)
             f.write(update_query + "\n")
-            f.flush()
-            rows = sql.run_query(query=update_query)
-            logger.info(f" {rows} Affected")
-            if rows < 1:
-                logger.warning(f"Gene {gene} couldn't been updated.")
-                failed_updates.append(gene)
+            # f.flush()
+    return update_query_list
+
+def update_queries(update_queries):
+    """
+    Takes a list of queries and updates the SQL
+    :param update_queries:
+    :return:
+    """
+    failed_updates = []
+    for update_query in update_queries:
+
+        rows = sql.run_query(query=update_query)
+        logger.info(f" {rows} Affected")
+        if rows < 1:
+            gene = re.search("mrna = '(.*)' WHERE", update_query).group(1)
+            logger.warning(f"Gene {update_query} couldn't been updated.")
+            failed_updates.append(gene)
+    return failed_updates
+
+def convert_all_genes():
+    query = "Select DISTINCT mrna from binding  where mrna like 'XM_%' or mrna like 'NM_%'"
+    genes = sql.get_query(query=query)['mrna']
+    if len(genes) < 1:
+        logger.info(f"No genes found in binding with query {query}")
+        return
+    logger.info(f"Evaluating names of {len(genes)} genes.")
+    genes = set(genes)
+    update_query = get_update_queries(genes)
+    failed_updates = update_queries(update_query)
+
             # query = f"Select * from binding where mrna = '{real_name}' limit 10"
             # nuevo = sql.run_query(query=query)
     return failed_updates
