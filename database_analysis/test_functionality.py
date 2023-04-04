@@ -1,6 +1,6 @@
 import pytest
 from database_analysis.convert_gene_names import convert_all_genes, get_gene, get_genes_from_transcripts, \
-    ncbi_connection
+    ncbi_connection, get_update_queries
 from database_analysis.map_gene_transcript import get_gene_names, convert_refseq_2_ensembl
 from ncbi.eutilities import EutilsConnection
 from ncbi.eutilities import NCBIDatabases
@@ -57,3 +57,10 @@ def get_ids_information():
     ids = [1779421316, 1519154122, 1518499068, 1040974839, 28996492, 28994628, 28994056, 957948862, 484275598]
     information = ncbi_connection.get_ids_information(db_id=ids)
     print(information)
+
+def test_get_update_queries():
+    pmids = ['NM_001328693', 'NM_000014', 'NM_000018', 'NM_000022']
+    update_query = get_update_queries(pmids, is_test=True)
+    print(update_query)
+    assert len(update_query)==3
+    assert update_query[0] == "UPDATE binding SET mrna = 'ADA' WHERE mrna='NM_000022'; \n"

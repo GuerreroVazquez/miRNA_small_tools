@@ -24,6 +24,11 @@ def get_gene(provitional_gene):
     return gene
 
 def get_genes_from_transcripts(provitional_gene):
+    """
+
+    :param provitional_gene:
+    :return: dict
+    """
     ids = ncbi_connection.fetch_queries_ids(term=provitional_gene)
     if len(ids) < 1:
         logger.error(f"The gene {provitional_gene} couldn't be found in NCBI")
@@ -42,41 +47,33 @@ def get_genes_from_transcripts(provitional_gene):
             logger.info(f"The name for {provitional_gene} will be {gene}")
     return dict_transcript_gene
 
-def get_update_queries(genes):
+def get_update_queries(genes, n=100, is_test=False):
     """
     Takes a list of transcripts, looks for the actual gene and save it on a temporal file.
+    :param is_test:
+    :param n:
     :param genes:
     :return:
     """
-    update_query_list = []
-    with open("Temporal_file.txt", 'a') as f:
-        for gene in genes:
-            logger.info(f"Evaluating {gene}")
-            real_name = get_gene(gene)
-            if real_name is None:
-                logger.error(f"There was no gene name for {gene}. Adding to watch out genes.")
-                with open("watchout_genes.txt", 'a') as wo:
-                    wo.write(gene + "\n")
-                continue
 
-            if gene is None:
-                logger.info(f"The gene '{gene}' was not found in NCBI")
-                continue
-            if gene == real_name:
-                logger.info(f"The gene '{gene}' is already the correct nomenclature")
-                continue
-            if len(real_name) > 30:
-                logger.warning(f"The gene {gene} wants to be changed to {real_name} but the name "
-                               f"is longer than 30 characters. The name will be truncated")
-            # query = f"Select * from binding where mrna = '{gene}' limit 2"
-            # viejo = sql.run_query(query=query)
-            update_query = f"UPDATE binding SET" \
-                           f" mrna = '{real_name}'" \
-                           f" WHERE mrna='{gene}';"
-            update_query_list.append(update_query)
-            f.write(update_query + "\n")
-            # f.flush()
-    return update_query_list
+    with open("Temporal_file.txt", 'a') as f:
+        groups = [genes[i:i + n] for i in range(0, len(genes), n)]
+        mega_update_query_list=[]
+        for genes in groups:
+            update_query_list = []
+            logger.info(f"Evaluating {genes}")
+            gene_or = ' OR '.join(genes)
+            real_names = get_genes_from_transcripts(gene_or)
+            for key, item in real_names.items():
+                update_query = f"UPDATE binding SET" \
+                               f" mrna = '{item}'" \
+                               f" WHERE mrna='{key}'; \n"
+                update_query_list.append(update_query)
+            if not is_test:
+                f.writelines(update_query_list)
+                f.flush()
+            mega_update_query_list.extend(update_query_list)
+    return mega_update_query_list
 
 def update_queries(update_queries):
     """
@@ -102,8 +99,9 @@ def convert_all_genes():
         logger.info(f"No genes found in binding with query {query}")
         return
     logger.info(f"Evaluating names of {len(genes)} genes.")
-    genes = set(genes)
-    update_query = get_update_queries(genes)
+    genes = list(set(genes))
+
+    update_query = get_update_queries(genes, n=250)
     failed_updates = update_queries(update_query)
 
             # query = f"Select * from binding where mrna = '{real_name}' limit 10"
