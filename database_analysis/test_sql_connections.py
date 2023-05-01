@@ -1,4 +1,4 @@
-from database_analysis import sql_operations as sql
+import sql_operations as sql
 
 
 def test_sql_connection():
